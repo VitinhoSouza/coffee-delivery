@@ -11,6 +11,7 @@ export const CountSelectContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 0 0.5rem;
 
     >span{
         color: ${(props)=>props.theme['base-title']};
@@ -29,7 +30,7 @@ export const CountButton = styled.button<CountButtonProps>`
   cursor: pointer;
 
   span{
-    font-size: ${(props)=> props.higher ? '2rem' : '1.5rem'};
+    font-size: ${(props)=> props.higher ? '1.8rem' : '1.2rem'};
     color: ${(props)=> props.theme.purple};
   }
 `

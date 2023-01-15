@@ -1,4 +1,5 @@
 import {ShoppingCart} from 'phosphor-react';
+import { useTheme } from 'styled-components';
 
 import coffee from '../../../../assets/coffee.png'
 import { CountSelect } from '../../../../components/CountSelect/CountSelect';
@@ -6,6 +7,8 @@ import { CountSelect } from '../../../../components/CountSelect/CountSelect';
 import * as S from './CoffeeCard.styles';
 
 export function CoffeeCard(){
+
+    const theme = useTheme();
 
     return(
         <S.CoffeeCardContainer>
@@ -25,7 +28,7 @@ export function CoffeeCard(){
                     <CountSelect/>
                     
                     <S.ButtonContainer>
-                        <ShoppingCart size={22}/>
+                        <ShoppingCart size={22} color={theme.white}/>
                     </S.ButtonContainer>
                 </S.CountContainer>
             </S.CardInfo>

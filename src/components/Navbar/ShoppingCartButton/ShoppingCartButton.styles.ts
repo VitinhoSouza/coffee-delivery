@@ -15,10 +15,10 @@ export const ShoppingCartButtonContainer = styled.button`
 
     svg{
         position: absolute;
-        path, circle{
-            stroke: ${(props) => props.theme['yellow-dark']};
-            fill: ${(props) => props.theme['yellow-dark']};
-        }
+    }
+
+    :focus {
+        box-shadow: none;
     }
 `
 

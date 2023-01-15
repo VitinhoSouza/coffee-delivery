@@ -35,7 +35,7 @@ export const CardInfo = styled.div`
         margin-bottom: 0.5rem;
     }
 
-    span{
+    >span{
         font-weight: 400;
         font-size: 0.875rem;
         line-height: 1.125rem;
@@ -93,13 +93,6 @@ export const ButtonContainer = styled.button`
 
     &:hover{
         background: ${(props) => props.theme['purple']};
-    }
-
-    svg{
-        path, circle{
-            stroke: ${(props) => props.theme.white};
-            fill: ${(props) => props.theme.white};
-        }
     }
 `
 

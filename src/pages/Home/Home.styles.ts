@@ -100,14 +100,6 @@ export const ButtonContainer = styled.div<TypeProps>`
     margin-right: 0.7rem;
 
     background: ${(props) => props.theme[TYPE_COLORS[props.typeColor]]};
-
-    svg{
-        position: absolute;
-        path, circle{
-            stroke: ${(props) => props.theme.white};
-            fill: ${(props) => props.theme.white};
-        }
-    }
 `
 
 

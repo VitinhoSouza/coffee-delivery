@@ -1,4 +1,5 @@
 import {ShoppingCart, Timer, Coffee, Package} from 'phosphor-react';
+import { useTheme } from 'styled-components';
 
 import banner from '../../assets/banner.png';
 import { CoffeeList } from './CoffeeListContainer/CoffeeList';
@@ -6,6 +7,8 @@ import { CoffeeList } from './CoffeeListContainer/CoffeeList';
 import * as S from './Home.styles';
 
 export function Home(){
+
+    const theme = useTheme();
 
     return(
         <S.HomeContainer>
@@ -19,28 +22,28 @@ export function Home(){
                     <S.ItemsContainer>
                         <S.Item>
                             <S.ButtonContainer typeColor='safetyBuy'>
-                                <ShoppingCart size={16}/>
+                                <ShoppingCart size={16} color={theme.white}/>
                             </S.ButtonContainer>
                             <span>Compra simples e segura</span>
                         </S.Item>
 
                         <S.Item>
-                            <S.ButtonContainer typeColor='packing'>
-                                <Package size={16}/>
+                            <S.ButtonContainer typeColor='packing' >
+                                <Package size={16} color={theme.white}/>
                             </S.ButtonContainer>
                             <span>Embalagem mantém o café intacto</span>
                         </S.Item>
 
                         <S.Item>
                             <S.ButtonContainer typeColor='fastDelivert'>
-                                <Timer size={16}/>
+                                <Timer size={16} color={theme.white}/>
                             </S.ButtonContainer>
                             <span>Entrega rápida e rastreada</span>
                         </S.Item>
 
                         <S.Item>
                             <S.ButtonContainer typeColor='freshCoffee'>
-                                <Coffee size={16}/>
+                                <Coffee size={16} color={theme.white}/>
                             </S.ButtonContainer>
                             <span>O café chega fresquinho até você</span>
                         </S.Item>
