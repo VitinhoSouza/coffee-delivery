@@ -3,6 +3,14 @@ import styled from "styled-components";
 export const OrderConfirmationContainer = styled.div`
   width: 45%;
 
+  @media (max-width: 1000px) {
+    width: 80%;
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+
   > p {
     font-family: "Baloo 2", sans-serif;
     font-weight: 700;
@@ -24,7 +32,7 @@ export const ProductCard = styled.div`
   gap: 1rem;
   padding-bottom: 1.5rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid ${(props) => props.theme["base-button"]};;
+  border-bottom: 1px solid ${(props) => props.theme["base-button"]};
 
   display: flex;
   align-items: center;
@@ -59,6 +67,11 @@ export const ProductCard = styled.div`
     .actions {
       display: flex;
       gap: 1rem;
+
+      @media (max-width: 300px) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 `;
@@ -77,6 +90,9 @@ export const RemoveButton = styled.button`
   gap: 4px;
   border-radius: 6px;
   font-size: 0.75rem;
+
+  width: 6rem;
+  height: 2.5rem;
 
   &:hover{
     background-color: ${(props) => props.theme["base-hover"]};

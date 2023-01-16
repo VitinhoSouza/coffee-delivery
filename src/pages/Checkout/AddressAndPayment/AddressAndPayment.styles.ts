@@ -11,6 +11,10 @@ export const AddressAndPaymentContainer = styled.div`
     font-size: 1.125rem;
     margin-bottom: 1rem;
   }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const AddressContainer = styled.div`
@@ -80,7 +84,9 @@ export const FormInputs = styled.div`
     &:nth-child(4) {
       width: 23rem;
 
-      
+      @media (max-width: 600px) {
+        width: 80%;
+      }
     }
 
     &:nth-child(4):before {
@@ -97,7 +103,9 @@ export const FormInputs = styled.div`
 
     &:nth-child(6) {
       width: 19.5rem;
-      resize: none;
+      @media (max-width: 600px) {
+        width: 12rem;
+      }
     }
 
     &:last-child {
@@ -120,6 +128,11 @@ export const PaymentForm = styled.div`
   align-items: center;
   justify-content: space-between;
   text-align: center;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 
   gap: 0.75rem;
   margin-top: 1rem;
