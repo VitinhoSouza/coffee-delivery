@@ -27,7 +27,7 @@ export const CardInfo = styled.div`
     margin: 0 auto;
     text-align: center;
 
-    p{
+    >p{
         font-family: 'Baloo 2', sans-serif;
         font-weight: 700;
         font-size: 1.25rem;
@@ -98,8 +98,9 @@ export const ButtonContainer = styled.button`
 
 export const ValueContainer = styled.div`
     font-size: 0.875rem;
+    margin-right: 1rem;
 
-    span{
+    >span{
         font-family: 'Baloo 2', sans-serif;
         font-weight: 800;
         font-size: 1.5rem;

@@ -39,7 +39,7 @@ export const Title = styled.div`
     width: 100%;
     margin-bottom: 3rem;
 
-    p{
+    >p{
         font-family: 'Baloo 2', sans-serif;
         font-weight: 800;
         font-size: 2.85rem;
@@ -49,7 +49,7 @@ export const Title = styled.div`
         margin-bottom: 1rem;
     }
 
-    span{
+    >span{
         font-size: 1.25rem;
         line-height: 1.6rem;
         color: ${(props)=> props.theme['base-subtitle']};

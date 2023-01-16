@@ -10,10 +10,6 @@ export function AddressAndPayment() {
 
   const { register } = useFormContext();
 
-  {
-    /* <input type="text" {...register("task")}/> */
-  }
-
   return (
     <S.AddressAndPaymentContainer>
       <p>Complete seu pedido</p>

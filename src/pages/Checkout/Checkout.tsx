@@ -24,7 +24,6 @@ export function Checkout(){
                 <AddressAndPayment/>
             </FormProvider>
             <OrderConfirmation/>
-            {/* <button type='submit'>Opa</button> */}
         </S.CheckoutContainer>
     )
 }

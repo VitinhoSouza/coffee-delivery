@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const CountSelectContainer = styled.div`
     height: 2.5rem;
     width: 4.5rem;
-    margin-left: 1rem;
 
     background-color: ${(props)=> props.theme['base-button']};
     border-radius: 6px;
@@ -29,8 +28,12 @@ export const CountButton = styled.button<CountButtonProps>`
   border: 0;
   cursor: pointer;
 
-  span{
+  >span{
     font-size: ${(props)=> props.higher ? '1.8rem' : '1.2rem'};
     color: ${(props)=> props.theme.purple};
+
+    &:hover{
+      color: ${(props)=> props.theme['purple-dark']};
+    }
   }
 `

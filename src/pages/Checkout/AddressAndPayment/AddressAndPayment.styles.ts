@@ -5,7 +5,7 @@ export const AddressAndPaymentContainer = styled.div`
 
   /* background-color: firebrick; */
 
-  p {
+  >p {
     font-family: "Baloo 2", sans-serif;
     font-weight: 700;
     font-size: 1.125rem;
@@ -30,7 +30,7 @@ export const Text = styled.div`
   flex-direction: column;
   margin-left: 0.5rem;
 
-  span {
+  > span {
     &:first-child {
       color: ${(props) => props.theme["base-subtitle"]};
     }
@@ -59,6 +59,11 @@ export const FormInputs = styled.div`
     font-size: 0.875rem;
     color: ${(props) => props.theme["base-label"]};
 
+    :focus {
+        outline: 0;
+        box-shadow: 0 0 0 2px ${(props) => props.theme['yellow-dark']};
+    }
+
     & + input {
       margin-top: 1rem;
     }
@@ -74,6 +79,12 @@ export const FormInputs = styled.div`
 
     &:nth-child(4) {
       width: 23rem;
+
+      
+    }
+
+    &:nth-child(4):before {
+      content: '🎮';
     }
 
     &:nth-child(2),
