@@ -22,7 +22,10 @@ export const CoffeeList = styled.div`
     padding: 0rem 0 3rem;
 
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 32px;
+
+    @media (max-width: 585px) {
+        justify-content: center;
+    }
 `

@@ -159,7 +159,11 @@ type CartContextProviderProps = {
 
 export const CartContextProvider = ({ children }: CartContextProviderProps) => {
 
-  const [selectedsProducts, setSelectedsProducts] = useState<SelectedsProducts[]>([]);
+  const cart = localStorage.getItem("@coffee-delivery:cart");
+
+  const [selectedsProducts, setSelectedsProducts] = useState<SelectedsProducts[]>(
+    cart ? JSON.parse(cart) : []
+  );
 
   function updateItemCart(itemId: string, quantity: number){
     const item = selectedsProducts.find(product => product.idCoffee === itemId);
@@ -193,6 +197,10 @@ export const CartContextProvider = ({ children }: CartContextProviderProps) => {
   function clearItemsCart(){
     setSelectedsProducts([]);
   }
+
+  useEffect(() => {
+    localStorage.setItem('@coffee-delivery:cart', JSON.stringify(selectedsProducts))
+  }, [selectedsProducts])
 
   return (
     <CartContext.Provider
