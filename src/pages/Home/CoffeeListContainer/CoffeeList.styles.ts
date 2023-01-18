@@ -19,9 +19,10 @@ export const CoffeeListContainer = styled.div`
 
 export const CoffeeList = styled.div`
     width: 100%;
-    padding: 1rem 0 3rem;
+    padding: 0rem 0 3rem;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 32px;
 `

@@ -13,13 +13,12 @@ export const CoffeeCardContainer = styled.div`
         position: relative;
         margin: 0 auto;
         margin-top: -1rem;
-        max-width: 7.5rem;
-        max-height: 7.5rem;
+        width: 7.5rem;
+        height: 7.5rem;
     }
 
     display: flex;
     flex-direction: column;
-
 `
 
 export const CardInfo = styled.div`
@@ -100,10 +99,14 @@ export const ValueContainer = styled.div`
     font-size: 0.875rem;
     margin-right: 1rem;
 
+    display: flex;
+    align-items: center;
+
     >span{
         font-family: 'Baloo 2', sans-serif;
         font-weight: 800;
         font-size: 1.5rem;
         color: ${(props) => props.theme['base-text']};
+        width: 4rem;
     }
 `

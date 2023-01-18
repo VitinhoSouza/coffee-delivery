@@ -1,16 +1,22 @@
 
 import * as S from './CountSelect.styles';
 
-export function CountSelect(){
+type CountSelectProps = {
+    value: number;
+    increase: () => void;
+    decrease: () => void;
+}
+
+export function CountSelect({value, increase, decrease}:CountSelectProps){
 
     return(
         <S.CountSelectContainer>
             <S.CountButton higher={true}>
-                <span>-</span>
+                <span onClick={decrease}>-</span>
             </S.CountButton>
-            <span>1</span>
+            <span>{value}</span>
             <S.CountButton>
-                <span>+</span>
+                <span onClick={increase}>+</span>
             </S.CountButton>
             
         </S.CountSelectContainer>

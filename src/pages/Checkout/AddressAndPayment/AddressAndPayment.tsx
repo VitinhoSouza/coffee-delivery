@@ -1,14 +1,29 @@
 import { useTheme } from "styled-components";
 import { useFormContext } from "react-hook-form";
 
-import { MapPinLine, CurrencyDollar, CreditCard, Bank, Money } from "phosphor-react";
+import {
+  MapPinLine,
+  CurrencyDollar,
+  CreditCard,
+  Bank,
+  Money,
+} from "phosphor-react";
 
 import * as S from "./AddressAndPayment.styles";
+import { useState } from "react";
 
 export function AddressAndPayment() {
   const theme = useTheme();
 
   const { register } = useFormContext();
+
+  const [cep, setCep] = useState("");
+
+  function updateCep(value:string){
+    if(!isNaN(Number(value))){
+      setCep(value);
+    }
+  }
 
   return (
     <S.AddressAndPaymentContainer>
@@ -24,7 +39,15 @@ export function AddressAndPayment() {
         </S.Description>
 
         <S.FormInputs>
-          <input type="text" placeholder="CEP" {...register("zip_code")} />
+          <input
+            value={cep}
+            type="text"
+            placeholder="CEP"
+            {...register("zip_code")}
+            minLength={8}
+            maxLength={8}
+            onChange={e => updateCep(e.target.value)}
+          />
           <input type="text" placeholder="Rua" {...register("street")} />
           <input type="text" placeholder="Número" {...register("number")} />
           <input
@@ -34,7 +57,7 @@ export function AddressAndPayment() {
           />
           <input type="text" placeholder="Bairro" {...register("district")} />
           <input type="text" placeholder="Cidade" {...register("city")} />
-          <input type="text" placeholder="UF" {...register("state")} />
+          <input type="text" placeholder="UF" {...register("state")} minLength={2} maxLength={2}/>
         </S.FormInputs>
       </S.AddressContainer>
 
@@ -57,7 +80,7 @@ export function AddressAndPayment() {
             {...register("payment")}
           />
           <label htmlFor="creditCard">
-            <CreditCard color={theme.purple}/> CARTÃO DE CRÉDITO
+            <CreditCard color={theme.purple} /> CARTÃO DE CRÉDITO
           </label>
 
           <input
@@ -67,12 +90,17 @@ export function AddressAndPayment() {
             value="debitCard"
           />
           <label htmlFor="debitCard">
-            <Bank color={theme.purple}/> CARTÃO DE DÉBITO
+            <Bank color={theme.purple} /> CARTÃO DE DÉBITO
           </label>
 
-          <input type="radio" id="money" {...register("payment")} value="money" />
+          <input
+            type="radio"
+            id="money"
+            {...register("payment")}
+            value="money"
+          />
           <label htmlFor="money">
-            <Money color={theme.purple}/>
+            <Money color={theme.purple} />
             DINHEIRO
           </label>
         </S.PaymentForm>

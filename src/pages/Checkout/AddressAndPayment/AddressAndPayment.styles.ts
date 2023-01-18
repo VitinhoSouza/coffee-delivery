@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const AddressAndPaymentContainer = styled.div`
   width: 56%;
 
-  /* background-color: firebrick; */
-
   >p {
     font-family: "Baloo 2", sans-serif;
     font-weight: 700;
