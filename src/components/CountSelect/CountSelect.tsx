@@ -11,11 +11,11 @@ export function CountSelect({value, increase, decrease}:CountSelectProps){
 
     return(
         <S.CountSelectContainer>
-            <S.CountButton higher={true}>
+            <S.CountButton higher={true} type="button">
                 <span onClick={decrease}>-</span>
             </S.CountButton>
             <span>{value}</span>
-            <S.CountButton>
+            <S.CountButton type="button">
                 <span onClick={increase}>+</span>
             </S.CountButton>
             
